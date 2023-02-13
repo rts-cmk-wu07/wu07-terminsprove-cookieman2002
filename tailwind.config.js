@@ -11,9 +11,19 @@ module.exports = {
       orange: "#F4A88E"
 
     },
-    fonts: {
-      
+    fontSize: {
+      extrabig:"62px",
+      big: "50px",
+      medium:"28px",
+      small:"22px"
     }, 
+    fontFamily: {
+      text: ["Arial"]
+    },
+    backgroundImage:{
+      "top-image": "url('/Assets/welcome - background.jpg')",
+      "bottom-image": "url('/Assets/welcome - center.jpg')"
+    }
     
   },
   plugins: [],
