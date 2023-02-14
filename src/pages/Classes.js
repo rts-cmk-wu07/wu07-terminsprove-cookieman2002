@@ -1,5 +1,5 @@
 const Classes = () => {
-    return ( <></> );
+    return ( <div></div> );
 }
  
 export default Classes;

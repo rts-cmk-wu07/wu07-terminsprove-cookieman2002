@@ -14,7 +14,7 @@ const Welcome = () => {
             </div>
         </section>
         <section className="h-[400px] mt-24 bg-bottom-image bg-center bg-cover flex justify-end">
-                <Link to="/login" className="rounded-l-2xl pr-5 pl-8 p-6 absolute z-10 bottom-20 bg-white text-medium">Start Training</Link>
+                <Link to="/home" className="rounded-l-2xl pr-5 pl-8 p-6 absolute z-10 bottom-20 bg-white text-medium">Start Training</Link>
         </section>
     </article> );
 }
