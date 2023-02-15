@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
+import Rating from "./sub-components/Rating";
 
 const ClassList = ({classId}) => {
     const [classes, setClasses] = useState();
@@ -12,14 +13,16 @@ const ClassList = ({classId}) => {
     }, [classId])
 
      
-    
-    return ( <div>
+ 
+    return ( <>
         {classes ? classes.map((items) => (
             <div key={items.classId}>
-                {items.rating}
+                <Rating value={items.rating}/>
             </div>
-        )) : <div></div> }
-    </div> );
+
+        )) : null }
+       
+    </> );
 }
  
 export default ClassList;

@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import ClassList from "../components/ClassList";
 import { Link } from "react-router-dom";
+import Rating from "../components/sub-components/Rating";
 
 
 const Home = () => {
@@ -34,15 +35,15 @@ const Home = () => {
 
             
             </section>
-                <p className="text-medium">Classes for you</p>
+                <p className="text-medium mb-10">Classes for you</p>
             <section className="flex flex-row-reverse overflow-x-auto gap-4 ">
             {/* {console.log(classesData)} */}
             {classesData && classesData.map((items, index) => (
-                <Link key={index} to={`/classDetails/${items.id}`}>
+                <Link key={index} state={{ from: "something"}} to={`/classDetails/${items.id}`}>
                 <div className="flex flex-col">
-                <img src={items.asset.url} className="h-32 w-96" alt="" />
+                <img src={items.asset.url} className="rounded-xl h-32 w-96" alt="" />
                 <p>{items.className}</p>
-                <ClassList classId={items.id}/>
+                <Rating classId={items.id} />
                 </div>
                 </Link>
             ))}
