@@ -13,8 +13,7 @@ const Rating = (props) => {
         getData()
     }, [classId])
 
-    console.log("classes", classes ? classes.map((item) => ( item.rating )) : undefined)
-    const ratingFound = classes ? classes.map((item) => ( item.rating )) : undefined
+    const ratingFound = classes ? classes.map((item) => ( item.rating )) : null
     const value = ratingFound || 0
     const maxRating = 5
     

@@ -16,13 +16,15 @@ const SearchNavigation = () => {
     console.log(params.pathname.split("/")[1])
 
     const isSchedule = urlPage.includes("Schedule")
+    const isClassDetails = urlPage.includes("classDetails")
     const classChange = classnames({
         "text-big": isSchedule,
         "text-medium": !isSchedule,
-        "flex": isSchedule
+        "flex": isSchedule,
+        "hidden": isClassDetails
     })
     
-    return ( <nav className="flex flex-col ml-3 mr-3">
+    return ( <nav className="relative z-10 flex flex-col ml-3 mr-3">
         <section className="mt-5 flex justify-between  items-center">
 
         <button className="text-orange flex items-center" onClick={goBack}>
@@ -30,7 +32,7 @@ const SearchNavigation = () => {
     <span className="mb-3" >Back</span>
     </button>
 
- {menu ? <div className=" flex flex-col h-screen z-10 bg-white w-screen absolute top-0" >
+ {menu ? <div className=" flex flex-col h-screen z-20 bg-white w-screen absolute top-0" >
     <button className="self-end" onClick={() => setMenu(false)}>
         <FeatherIcon icon="x" color="#E4E4E4" size="40" />
     </button>
@@ -50,7 +52,7 @@ const SearchNavigation = () => {
             
             </li>
         </ul>
-    </div> : <button onClick={() => setMenu(true)}>
+    </div> : <button className={classChange} onClick={() => setMenu(true)}>
         <FeatherIcon icon="align-right" color="#E4E4E4" />
     </button> }
         </section>

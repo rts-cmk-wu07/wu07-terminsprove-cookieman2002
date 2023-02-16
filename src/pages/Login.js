@@ -1,9 +1,13 @@
 import { useNavigate } from "react-router-dom";
 import FeatherIcon from "feather-icons-react";
+import { useState } from "react";
+import axios from "axios";
+import useCookie from "react-use-cookie"
 const Login = () => {
+const [token, setToken] = useCookie("token", 0);
 
-
-function LoginHandler(e){
+async function LoginHandler(e){
+    
     e.preventDefault()
 
     const info = {
@@ -12,7 +16,13 @@ function LoginHandler(e){
 
     }
 
-    console.log(info)
+await axios.post("http://localhost:4000/auth/token", info)
+.then((response) => console.log(response))
+
+    
+    
+
+    
 }
 const navigate = useNavigate()
 

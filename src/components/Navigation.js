@@ -5,7 +5,7 @@ import FeatherIcon from "feather-icons-react"
 const Navigation = () => {
 
 const [menu, setMenu] = useState();
-const [loggedIn] = useState();
+const [loggedIn] = useState(false);
 
     const navigate = useNavigate()
 
@@ -19,7 +19,7 @@ return ( <nav className="mt-5 flex justify-around items-center">
     </button>
     <h1 className="text-medium mb-10">Popular Classes</h1>
     
-    {menu ? <div className=" flex flex-col h-screen z-10 bg-white w-screen absolute top-0" >
+    {menu ? <div className=" flex flex-col h-screen z-50 bg-white w-screen absolute top-0" >
     <button className="self-end" onClick={() => setMenu(false)}>
         <FeatherIcon icon="x" color="#E4E4E4" size="40" />
     </button>
