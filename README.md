@@ -1,9 +1,9 @@
-## Backend
+# Backend
 
-## Approach
+# Approach
 # MVP
 
-## Frontend stack
+# Frontend stack
 
 ## react-router-dom
 
