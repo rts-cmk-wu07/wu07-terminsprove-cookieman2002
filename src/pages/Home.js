@@ -1,7 +1,6 @@
 import Navigation from "../components/Navigation";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import ClassList from "../components/ClassList";
 import { Link } from "react-router-dom";
 import Rating from "../components/sub-components/Rating";
 
@@ -43,7 +42,7 @@ const Home = () => {
         <Navigation/>
         <section className="flex flex-col ml-5 mr-5">
             <section className="relative">
-                <img  className="rounded-xl h-96 " src={classData && classData.asset.url} alt="class" />
+                <img  className="rounded-xl object-cover h-96 " src={classData && classData.asset.url} alt="class" />
         <p className="z-10 absolute bottom-10 text-white text-big w-48 ml-5">
             {classData && classData.className}
         </p>

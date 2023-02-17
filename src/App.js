@@ -4,7 +4,7 @@ import { TokenContext } from "./contexts/TokenContext";
 
 function App() {
 
-const [token, setToken] = useCookie("")
+const [token, setToken] = useCookie("token")
   return (
     <TokenContext.Provider value={{token, setToken}}>
     <div className="App">

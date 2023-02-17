@@ -8,7 +8,6 @@ import NoPages from "./pages/NoPages"
 import ClassDetails from "./pages/ClassDetails"
 import Home from './pages/Home';
 import Login from './pages/Login';
-import SearchPage from './pages/SearchPage';
 import Schedule from './pages/Schedule';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -20,7 +19,6 @@ root.render(
           <Route path="/login" element={<Login/>} />
           <Route path="/classDetails/:id" element={<ClassDetails/>} />
           <Route path="/home" element={<Home/>} />
-          <Route path='/Search' element={<SearchPage/>} />
           <Route path="/Schedule" element={<Schedule/> } />
           <Route path="*" element={ <NoPages/> } />
         </Route>

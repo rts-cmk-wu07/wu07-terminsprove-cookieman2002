@@ -1,11 +1,27 @@
 import { Link, useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import FeatherIcon from "feather-icons-react"
+import { TokenContext } from "../contexts/TokenContext";
+import { getCookie, setCookie } from "react-use-cookie";
 
 const Navigation = () => {
 
 const [menu, setMenu] = useState();
-const [loggedIn] = useState(false);
+const [loggedIn, setLoggedIn] = useState();
+const {token, setToken} = useContext(TokenContext)
+const cookieToken = getCookie("token")
+
+
+useEffect(() => {
+    if(token.token){
+        setLoggedIn(true)
+    }
+
+    if(cookieToken.token){
+        setLoggedIn(true)
+    }
+}, []);
+
 
     const navigate = useNavigate()
 
@@ -35,7 +51,11 @@ return ( <nav className="mt-5 flex justify-around items-center">
             </li> : null}
             
             <li>
-                {loggedIn ? <button>Log Out</button> : <Link to="/login" >Log in</Link> }
+                {loggedIn ? <button onClick={() => {
+                    setToken("")
+                    navigate(0)
+                    setCookie("token", null, {days: -1})
+                }} >Log Out</button> : <Link to="/login" >Log in</Link> }
             
             </li>
         </ul>
