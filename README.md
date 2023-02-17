@@ -43,7 +43,7 @@ yarn add react-router-dom
 ```
 
 ### tailwindcss
-I am using TailwindCss its a utility-first css framework that make its easier for the developer to make styling and have a good overview on where all the styling is
+I am using `TailwindCss` its a utility-first css framework that make its easier for the developer to make styling and have a good overview on where all the styling is
 by using classnames
 
 
@@ -106,7 +106,7 @@ or
 yarn add feather-icons-react
 ```
 ### react
-I am using react is a framework that has been used in my Framework since its the primary library we have been teach in so its the framework i feel most comfortable with. I could have used angulars framework since i have worked with it before but it would have taken more time since its not something i'm really comfortable with.
+I am using `react` is a framework that has been used in my framework since its the primary library we have been teach in so its the framework i feel most comfortable with. I could have used `angular`'s framework since i have worked with it before but it would have taken more time since its not something i'm really comfortable with.
 
 this how you install
 ```bash
