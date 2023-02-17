@@ -1,10 +1,13 @@
+## Backend
+
 ## Approach
 # MVP
 
 ## Frontend stack
 
-## react-router
-React Router DOM is an npm package that enables you to implement dynamic routing in a web app. It allows you to display pages and allow users to navigate them. It is a fully-featured client and server-side routing library for React. React Router Dom is used to build single-page applications i.e. applications that have many pages or components but the page is never refreshed instead the content is dynamically fetched based on the URL. This process is called Routing and it is made possible with the help of React Router Dom.
+## react-router-dom
+
+i am using `react-router-dom` to route through the diffrent urls and get diffrent elememts and doesnt re render all at the same it takes small bits
 
 this how you install
 ```bash
@@ -16,7 +19,8 @@ yarn add react-router-dom
 ```
 
 ## tailwindcss
-Tailwind CSS is a utility-first CSS framework designed to enable users to create applications faster and easier. You can use utility classes to control the layout, color, spacing, typography, shadows, and more to create a completely custom component design — without leaving your HTML or writing a single line of custom CSS.
+I am using TailwindCss its a utility-first css framework that make its easier for the developer to make styling and have a good overview on where all the styling is
+by using classnames
 
 
 ```bash
@@ -69,7 +73,7 @@ or
 yarn add feather-icons-react
 ```
 ## react
-
+I am using react is a framework that has been used in my Framework since its the primary library we have been teach in so its the framework i feel most comfortable with. I could have used angulars framework since i have worked with it before but it would have taken more time since its not something i'm really comfortable with.
 ```bash
 npx create-react-app my-app
 cd my-app
@@ -83,16 +87,6 @@ yarn start
 
 ```
 
-## framer-motion
-
-```bash
-npm i framer-motion
-```
-or
-```bash
-yarn add framer-motion
-```
-
 ## classnames
 
 ```bash
@@ -101,4 +95,13 @@ npm i classnames
 or
 ```bash
 yarn add classnames
+```
+
+## react-use-cookie
+```bash
+npm i react-use-cookie
+```
+or
+```bash
+yarn add react-use-cookie
 ```
