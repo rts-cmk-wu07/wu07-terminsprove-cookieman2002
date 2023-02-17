@@ -1,3 +1,6 @@
+## Approach
+
+
 ## Frontend stack
 
 ## react-router
@@ -15,8 +18,22 @@ yarn i react-router
 ## tailwindcss
 
 ```bash
-npm i classnames
+npm install -D tailwindcss
+npx tailwindcss init
 ```
+
+````javascript
+#File: tailwind.config.js
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./src/**/*.{js,jsx,ts,tsx}",
+  ],
+  plugins: [],
+}
+
+
+````
 
 ## axios
 
