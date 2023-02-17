@@ -5,6 +5,9 @@
 
 # Frontend stack
 
+- [react](#react)
+
+
 ## react-router-dom
 
 i am using `react-router-dom` to route through the diffrent urls and get diffrent elememts and doesnt re render all at the same it takes small bits
