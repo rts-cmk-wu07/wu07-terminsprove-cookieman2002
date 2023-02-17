@@ -1,12 +1,12 @@
 import { useNavigate } from "react-router-dom";
 import FeatherIcon from "feather-icons-react";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import axios from "axios";
 import useCookie from "react-use-cookie"
+import { TokenContext } from "../contexts/TokenContext";
 const Login = () => {
-const [token, setToken] = useCookie("token", 0);
-
-async function LoginHandler(e){
+const {token, setToken} = useContext(TokenContext);
+function LoginHandler(e){
     
     e.preventDefault()
 
@@ -16,12 +16,21 @@ async function LoginHandler(e){
 
     }
 
-await axios.post("http://localhost:4000/auth/token", info)
-.then((response) => console.log(response))
-
+    try {
+        
+        
+        axios.post("http://localhost:4000/auth/token", info)
+        .then((response) => setToken(response.data.from, {
+            days: 5
+        }))
+        
+        console.log("token", token)
+    } 
     
     
-
+    catch (error) {
+        console.log(error)
+    }
     
 }
 const navigate = useNavigate()
