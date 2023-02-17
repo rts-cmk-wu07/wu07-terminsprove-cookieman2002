@@ -14,6 +14,9 @@ i have used the `trainer api` that have been distributed to the project
 ## Approach
 ### MVP
 
+- [project](https://github.com/orgs/rts-cmk-wu07/projects/8)
+- [issues](https://github.com/rts-cmk-wu07/wu07-terminsprove-cookieman2002/issues)
+
 ## Frontend stack
 
 - [React](#react)
