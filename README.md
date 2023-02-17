@@ -22,7 +22,8 @@ npm install -D tailwindcss
 npx tailwindcss init
 ```
 
-#File: tailwind.config.js
+set up tailwindcss
+
 ````javascript
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -31,9 +32,15 @@ module.exports = {
   ],
   plugins: [],
 }
-
-
 ````
+
+````css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+````
+
+
 
 ## axios
 
