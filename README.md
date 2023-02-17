@@ -1,5 +1,5 @@
 ## Approach
-
+# MVP
 
 ## Frontend stack
 
@@ -8,22 +8,30 @@ React Router DOM is an npm package that enables you to implement dynamic routing
 
 this how you install
 ```bash
-npm i react-router
+npm i react-router-dom
 ```
 or
 ```bash
-yarn i react-router
+yarn add react-router-dom
 ```
 
 ## tailwindcss
+Tailwind CSS is a utility-first CSS framework designed to enable users to create applications faster and easier. You can use utility classes to control the layout, color, spacing, typography, shadows, and more to create a completely custom component design — without leaving your HTML or writing a single line of custom CSS.
+
 
 ```bash
 npm install -D tailwindcss
 npx tailwindcss init
 ```
+or
+````bash
+yarn add -D tailwindcss postcss autoprefixer
+yarn tailwindcss init
+````
 
 set up tailwindcss
 
+#File: tailwind.config.js
 ````javascript
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -33,7 +41,7 @@ module.exports = {
   plugins: [],
 }
 ````
-
+#File index.css or app.css
 ````css
 @tailwind base;
 @tailwind components;
@@ -45,29 +53,52 @@ module.exports = {
 ## axios
 
 ```bash
-npm i classnames
+npm i axios
 ```
-
+or
+```bash
+yarn add axios
+```
 ## feather-icons-react
 
 ```bash
-npm i classnames
+npm i feather-icons-react
 ```
-
+or
+```bash
+yarn add feather-icons-react
+```
 ## react
 
 ```bash
-npm i classnames
+npx create-react-app my-app
+cd my-app
+npm start
+```
+or
+```bash
+yarn create react-app my-app
+cd my-app
+yarn start
+
 ```
 
 ## framer-motion
 
 ```bash
-npm i classnames
+npm i framer-motion
+```
+or
+```bash
+yarn add framer-motion
 ```
 
 ## classnames
 
 ```bash
 npm i classnames
+```
+or
+```bash
+yarn add classnames
 ```
